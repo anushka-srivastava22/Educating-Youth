@@ -1,0 +1,112 @@
+<%- include("../../partials/header") %>
+
+   <div class="animation-1">
+       <div class="animation-1-item">
+           <img src="../images/SL3.jpg">
+           <div class="animation-1-item-text">
+               <h5>Quiz</h5>
+               <a href="#">
+                <p> Wanna do some questions.</p>  
+               </a>
+            </div>  
+       </div>
+
+       
+        <div class="animation-1-item">
+            <img src="../images/SL2.jpg">
+            <div class="animation-1-item-text">
+                <h5>Quiz</h5>
+                <a href="#">
+                 <p> Wanna do some questions.</p>  
+                </a>
+             </div>  
+        </div>
+
+        
+            <div class="animation-1-item">
+                <img src="../images/SL1.png">
+                <div class="animation-1-item-text">
+                    <h5>Quiz</h5>
+                    <a href="#">
+                     <p> Wanna do some questions.</p>  
+                    </a>
+                 </div>  
+            </div>     
+   </div>
+
+
+   <section class="bookheading">
+    <h1>ELECTRICAL</h1>
+  </section>
+
+  <section class="subjects">
+    <h3> ELECTRICAL CIRCUIT </h3>
+  </section>
+
+ <div class="bookbox">
+   <% book.forEach(function(book){ if(book.bookId === 'ELECEC'){ %>
+		<div class="boxes">
+			<a href="/gate-electrical/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
+    </div>
+
+ <section class="subjects">
+    <h3>POWER ELECTRONICS</h3>
+  </section>
+
+  <div class="bookbox">
+   <% book.forEach(function(book){ if(book.bookId === 'ELECPE'){ %>
+		<div class="boxes">
+			<a href="/gate-electrical/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
+    </div>
+
+ <section class="subjects">
+    <h3>POWER SYSTEM</h3>
+ </section>
+
+ <div class="bookbox">
+    <% book.forEach(function(book){ if(book.bookId === 'ELECPS'){ %>
+		<div class="boxes">
+			<a href="/gate-electrical/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
+    </div>
+	
+	<section class="subjects">
+    <h3>SIGNALS AND SYSTEMS</h3>
+ </section>
+
+ <div class="bookbox">
+     <% book.forEach(function(book){ if(book.bookId === 'ELECSAS'){ %>
+		<div class="boxes">
+			<a href="/gate-electrical/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
+    </div>
+	
+	<section class="subjects">
+    <h3>MATHS</h3>
+ </section>
+
+ <div class="bookbox">
+    <% book.forEach(function(book){ if(book.bookId === 'ELECM'){ %>
+		<div class="boxes">
+			<a href="/gate-electrical/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
+    </div>
+
+<%- include("../../partials/footer") %>

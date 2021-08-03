@@ -1,0 +1,84 @@
+<%- include("../partials/header") %>
+
+   <div class="animation-1">
+       <div class="animation-1-item">
+           <img src="../images/NEET.jpg">
+           <div class="animation-1-item-text">
+               <h5>Quiz</h5>
+               <a href="#">
+                <p> Wanna do some questions.</p>  
+               </a>
+            </div>  
+       </div>
+
+       
+        <div class="animation-1-item">
+            <img src="../images/NEET2.jpg">
+            <div class="animation-1-item-text">
+                <h5>Quiz</h5>
+                <a href="#">
+                 <p> Wanna do some questions.</p>  
+                </a>
+             </div>  
+        </div>
+
+        
+            <div class="animation-1-item">
+                <img src="../images/NEET3.jpg">
+                <div class="animation-1-item-text">
+                    <h5>Quiz</h5>
+                    <a href="#">
+                     <p> Wanna do some questions.</p>  
+                    </a>
+                 </div>  
+            </div>     
+   </div>
+
+
+   <section class="bookheading">
+    <h1>NEET</h1>
+  </section>
+
+  <section class="subjects">
+    <h3>PHYSICS</h3>
+  </section>
+
+ <div class="bookbox">
+	<% book.forEach(function(book){ if(book.bookId === 'NEETPHY'){ %>
+    <div class="boxes">
+		<a href="/neet/<%= book._id %>">
+			<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+		</a>
+	 </div>
+	 <% }}) %>
+ </div>
+
+ <section class="subjects">
+    <h3> CHEMISTRY </h3>
+  </section>
+
+  <div class="bookbox">
+   <% book.forEach(function(book){ if(book.bookId === 'NEETCHEM'){ %>
+    <div class="boxes">
+		<a href="/neet/<%= book._id %>">
+			<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+		</a>
+	 </div>
+	 <% }}) %>
+   </div>
+
+ <section class="subjects">
+    <h3> BIOLOGY </h3>
+ </section>
+
+ <div class="bookbox">
+   <% book.forEach(function(book){ if(book.bookId === 'NEETBIO'){ %>
+    <div class="boxes">
+		<a href="/neet/<%= book._id %>">
+			<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+		</a>
+	 </div>
+	 <% }}) %>
+  </div>
+
+<%- include("../partials/footer") %>

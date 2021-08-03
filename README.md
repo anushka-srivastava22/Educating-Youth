@@ -1,0 +1,2 @@
+# educado
+A full stack, book recommendation web application for all major exams like GATE, CAT, NEET

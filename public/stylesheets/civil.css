@@ -1,0 +1,186 @@
+/* civil - HEADER,BOXES */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:#f6f5f5;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.civil-animation-1{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.civil-animation-1-item{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    opacity: 0;
+    animation: cycleimages 30s infinite;
+}
+
+.civil-animation-1-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: zoom 30s infinite;
+    opacity: 0.7;
+}
+
+.civil-animation-1-item:nth-child(1),
+.civil-animation-1-item:nth-child(1) img{
+    animation-delay: 0s;
+}
+.civil-animation-1-item:nth-child(2),
+.civil-animation-1-item:nth-child(2) img{
+    animation-delay: 9s;
+}
+.civil-animation-1-item:nth-child(3),
+.civil-animation-1-item:nth-child(3) img{
+    animation-delay: 20s;
+}
+
+
+.civil-animation-1-item-text{
+    max-width:50% ;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, .6);
+    color:#f6f5f5 ;
+    padding: 4.5rem 2rem;
+    cursor:pointer;
+}
+.civil-animation-1-item-text h5{
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+.civil-animation-1-item-text a{
+    text-decoration: none;
+    color: #f6f5f5;
+    font-weight: bold;
+    font-size: 50px;
+}
+.civil-animation-1-item-text p{
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #f6f5f5;
+    font-size: 20px;
+}
+
+
+@keyframes cycleimages{
+    25%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 10;
+    }
+}
+@keyframes zoom{
+    100%{
+        transform: scale(1.3);
+    }
+}
+
+
+#more {display: none;}
+#dots { color: #f6f5f5;}
+
+
+.civil-bookheading{
+    display: block;
+    width: auto;
+    height: 12vh;
+    position: relative;
+    color: #f6f5f5 ;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    background-color: #276678;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    letter-spacing: 4px;
+}
+
+.civil-bookbox{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr;
+    grid-gap: 7px;
+    padding-left: 1px;
+    margin-top: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); 
+    margin-bottom: 10px;
+}
+
+.civil-subjects{
+    display: block;
+    width: auto;
+    height: 9vh;
+    position: relative;
+    color: #f6f5f5;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color:#276678;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    letter-spacing: 3px;
+    padding-top: 10px;
+}
+
+.civil-boxes{
+    height: 200px;
+    width: 18vw;
+    border: 3px solid #f6f5f5;
+    /* border: 3px solid white; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border-radius: 5px; */
+}
+
+.civil-img:hover{
+    box-shadow: 0 5px 15px #445d6e;
+    transition-timing-function: all ease-in-out;
+    transition-duration: 0.5s;
+}
+
+
+
+@media scrciviln and (max-width: 1000px){
+    .civil-animation-1-item-text{
+        max-width: 70%;
+        padding: 3rem 0.7rem;
+    }
+    .civil-animation-1-item-text h5{
+        font-size: 3rem;
+    }
+}
+@media scrciviln and (max-width:767px){
+    .civil-animation-1-item-text{
+        max-width: 100%;
+        padding: 2rem;
+        top: initial;
+        bottom: 0;
+        transform: initial;
+    }
+    .civil-animation-1-item-text h5{
+        font-size: 2rem;
+    }
+    .civil-animation-1-item-text p{
+        font-size: 1rem;
+    }
+    
+}

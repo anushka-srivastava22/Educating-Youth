@@ -1,0 +1,44 @@
+<%- include("../partials/header") %>
+
+<div class="d-flex justify-content-center">
+	<form action="/admin/books" method="POST" class="form py-3">
+		<h1 class="mb-4">Add Book</h1>
+		<div class="form-group">
+			<label><b>Name of book</b></label>
+			<input type="text" name="book[name]" class="form-control" required>
+		</div>
+		<div class="form-group">
+			<label><b>Description of book</b></label>
+			<input type="text" name="book[desc]" class="form-control" required>
+		</div>
+		<div class="form-group">
+			<label><b>Author's Name</b></label>
+			<input type="text" name="book[author]" class="form-control" required>
+		</div>
+		<div class="form-group">
+			<label><b>Price</b></label>
+			<input type="text" name="book[price]" class="form-control" required>
+		</div>
+		<div class="form-group">
+			<label><b>Book cover</b></label>
+			<input type="text" name="book[cover]" class="form-control" required>
+		</div>
+		<div class="form-group">
+			<label><b>Buy Link</b></label>
+			<input type="text" name="book[buyLink]" class="form-control" required>
+		</div>
+		<div class="form-group">
+			<label><b>Book ID</b></label>
+			<input type="text" name="book[bookId]" class="form-control" required>
+		</div>
+		<div class="form-group">
+			<label><b>Section Name</b></label>
+			<input type="text" name="book[sectionName]" class="form-control" required>
+		</div>
+		<div>
+			<button type="submit" class="btn btn-dark">Submit</button>
+		</div>
+	</form>
+</div>
+
+<%- include("../partials/footer") %>

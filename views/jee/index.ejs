@@ -1,0 +1,102 @@
+<%- include("../partials/header") %>
+
+    <div class="animation-1">
+        <div class="animation-1-item">
+            <img src="../images/j5.jpg">
+            <div class="animation-1-item-text">
+            <h5>Quiz</h5>
+            <a href="#">
+                 <p> Wanna do some questions.</p>  
+                </a>
+            </div>
+        </div>
+        <div class="animation-1-item">
+            <img src="../images/j2.webp">
+            <div class="animation-1-item-text">
+            <h5>exams</h5>
+            <a href="#">  
+                 <p> Wanna do some questions.</p>
+                 </a> 
+            </div>
+        </div>
+        <div class="animation-1-item">
+            <img src="../images/j4.jpg">
+            <div class="animation-1-item-text">
+            <h5>website</h5>
+            <a href="#">
+                 <p> Wanna do some questions.</p>  
+                </a> 
+            </div>
+        </div>
+    </div>
+
+    <section class="bookheading">
+        <h1> JEE MAINS</h1>
+    </section>
+        
+    <section class="subjects">
+        <h2> MATHS</h2>
+    </section>
+ <div class="bookbox">
+	<% book.forEach(function(book){ if(book.bookId === 'JEEMATHS'){ %>
+		<div class="boxes">
+			<a href="/jee-mains/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
+ </div>
+
+    <section class="subjects">
+        <h2> PHYSICS</h2>
+    </section>
+    <div class="bookbox">
+   <% book.forEach(function(book){ if(book.bookId === 'JEEPHY'){ %>
+		<div class="boxes">
+			<a href="/jee-mains/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
+    </div>
+
+    <section class="subjects">
+        <h2> CHEMISTRY</h2>
+    </section>
+    <div class="bookbox">
+    <% book.forEach(function(book){ if(book.bookId === 'JEECHEM'){ %>
+		<div class="boxes">
+			<a href="/jee-mains/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
+    </div>
+
+    <section class="subjects">
+        <h2> ALL IN ONE</h2>
+    </section>
+    <div class="bookbox">
+        <div class="boxes"><img src="../images/jc6.jfif" alt="" ></div>
+        <div class="boxes"><img src="../images/ja1.jfif" alt="" ></div>
+        <div class="boxes"><img src="../images/jc7.jfif" alt="" ></div>
+        <div class="boxes"><img src="../images/ja2.jfif" alt="" ></div>
+        <div class="boxes"><img src="../images/ja3.jfif" alt="" ></div>
+        <span id="dots">.</span> 
+        <span id="more">
+            <div class="morebox">
+               <div class="boxes"> 
+              <img src="../images/jp6.jfif" alt="" >
+        </div> 
+          <div class="boxes">
+              <img src="../images/ja4.jfif" alt="" >
+            </div>
+          
+		  <div class="boxes">
+              <img src="../images/jm3.jfif" alt="" >
+            </div>
+          </div></span>
+    </div>
+    <button class="shbtn" onclick="myFunction()" id="myBtn">Suggest more</button>
+
+<%- include("../partials/footer") %>

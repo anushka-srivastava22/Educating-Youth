@@ -1,0 +1,90 @@
+<!-- FOOTER-->
+
+<footer>	
+    <div class="main_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-6 col-12">
+                    <div class="footer_box">
+                        <!--<a href="#"><img src="yahan koi logo decide krna hai "></a>-->
+                        <h3> EverGreen Educado</h3>
+                        <p> Best resources all at one place. <br>
+                             &copy; 2021 
+                        </p>
+                        
+						<p>
+							<ul>
+							<% if(!currentUser){ %>
+							  <li class="nav-item"><a class="nav-link" href="/login">Login</a></li> 
+							  <li class="nav-item"><a class="nav-link" href="/register">SignUp</a></li>
+							  <% } else { %>
+							  <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+								<li class="nav-item"><a class="nav-link"><%=currentUser.username%></a></li>
+							  <% } %>
+						</ul>
+						</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+                    <div class="footer_box">
+                        <h2>Quick Links</h2>
+                        <hr>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about-us">About Us</a></li>
+                            <li><a href="/#books-locate">Books</a></li>
+                            <li><a href="#">Fun</a></li>
+                            <li><a href="/contact-us">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 our-services-footer">
+                    <div class="footer_box">
+                        <h2>Our Services</h2>
+                        <hr>
+                        <ul>
+                            <li><a href="/gate-categories">GATE</a></li>
+                            <li><a href="/cat">CAT</a></li>
+                            <li><a href="/clat">CLAT</a></li>
+                            <li><a href="/jee-mains">JEE MAINS</a></li>
+                            <li><a href="/neet">NEET</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12 get-in-touch-footer">
+                    <div class="footer_box">
+                        <h2>Get in Touch</h2>
+                        <hr>
+                        <div class="footer_address">
+                            <h6><a href=""><i class="fa fa-map-marker"></i> Gautam Buddha University</a></h6>
+                            <h6><a href="tel:+91-92******79"><i class="fa fa-phone"></i> +91-92******79</a></h6>
+                            <h6><a href="mailto:cseproject2023@gmail.com"><i class="fa fa-envelope"></i> cseproject2023@gmail.com</a></h6>
+                        </div>
+                        <div class="footer_socialicons">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-github"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+	
+<script>
+
+   var preloader = document.getElementById('loading');
+   function myFunction()
+   {
+       preloader.style.display = 'none';
+   }
+	   
+</script> 
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<%- include("../../partials/header") %>
+
+   <div class="animation-1">
+       <div class="animation-1-item">
+           <img src="../images/Cs1.jpeg">
+           <div class="animation-1-item-text">
+               <h5>Quiz</h5>
+               <a href="#">
+                <p> Wanna do some questions.</p>  
+               </a>
+            </div>  
+       </div>
+
+       
+        <div class="animation-1-item">
+            <img src="../images/Cs2.jpg">
+            <div class="animation-1-item-text">
+                <h5>Quiz</h5>
+                <a href="#">
+                 <p> Wanna do some questions.</p>  
+                </a>
+             </div>  
+        </div>
+
+        
+            <div class="animation-1-item">
+                <img src="../images/Cs3.png">
+                <div class="animation-1-item-text">
+                    <h5>Quiz</h5>
+                    <a href="#">
+                     <p> Wanna do some questions.</p>  
+                    </a>
+                 </div>  
+            </div>     
+   </div>
+
+
+   <section class="bookheading">
+    <h1>GATE-CSE/IT</h1>
+  </section>
+
+  <section class="subjects">
+    <h3>Engineering Mathematics</h3>
+  </section>
+
+ <div class="bookbox">
+    <% book.forEach(function(book){ if(book.bookId === 'CSEEM'){ %>
+		<div class="boxes">
+			<a href="/gate-cse/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
+    </div>
+
+ <section class="subjects">
+    <h3> Programming and Data Structures</h3>
+  </section>
+
+  <div class="bookbox">
+    <% book.forEach(function(book){ if(book.bookId === 'CSEPADS'){ %>
+		<div class="boxes">
+			<a href="/gate-cse/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
+    </div>
+
+ <section class="subjects">
+    <h3> Algorithms</h3>
+ </section>
+
+ <div class="bookbox">
+   <% book.forEach(function(book){ if(book.bookId === 'CSEA'){ %>
+		<div class="boxes">
+			<a href="/gate-cse/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
+    </div>
+
+<section class="subjects">
+    <h3> Compiler Design</h3>
+ </section>
+
+ <div class="bookbox">
+    <% book.forEach(function(book){ if(book.bookId === 'CSECD'){ %>
+		<div class="boxes">
+			<a href="/gate-cse/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
+    </div>
+ 
+<section class="subjects">
+    <h3>Operating System</h3>
+ </section>
+
+ <div class="bookbox">
+    <% book.forEach(function(book){ if(book.bookId === 'CSEOS'){ %>
+		<div class="boxes">
+			<a href="/gate-cse/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %> 
+    </div> 
+
+<%- include("../../partials/footer") %>

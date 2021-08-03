@@ -1,0 +1,15 @@
+<%- include("../../partials/header") %>
+
+<div class="d-flex justify-content-center">
+	<form action="/neet/<%= book._id %>/reviews" method="POST" class="form py-3">
+		<h5 class="mb-4 text-left">Leave a review</h5>
+		<div class="form-group">
+			<textarea class="form-control" name="comment[text]" required></textarea>
+		</div>
+		<div>
+			<button type="submit" class="btn btn-dark">Submit</button>
+		</div>
+	</form>
+</div>
+
+<%- include("../../partials/footer") %>

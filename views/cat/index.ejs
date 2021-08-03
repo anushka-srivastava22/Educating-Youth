@@ -1,0 +1,84 @@
+<%- include("../partials/header") %>
+
+   <div class="animation-1">
+       <div class="animation-1-item">
+           <img src="../images/4.png">
+           <div class="animation-1-item-text">
+               <h5>Quiz</h5>
+               <a href="#">
+                <p> Wanna do some questions.</p>  
+               </a>
+            </div>  
+       </div>
+
+       
+        <div class="animation-1-item">
+            <img src="../images/c1.jpg">
+            <div class="animation-1-item-text">
+                <h5>Quiz</h5>
+                <a href="#">
+                 <p> Wanna do some questions.</p>  
+                </a>
+             </div>  
+        </div>
+
+        
+            <div class="animation-1-item">
+                <img src="../images/c2.jpg">
+                <div class="animation-1-item-text">
+                    <h5>Quiz</h5>
+                    <a href="#">
+                     <p> Wanna do some questions.</p>  
+                    </a>
+                 </div>  
+            </div>     
+   </div>
+
+
+   <section class="bookheading">
+    <h1>CAT</h1>
+  </section>
+
+  <section class="subjects">
+    <h3> Verbal Ability </h3>
+  </section>
+
+ <div class="bookbox">
+	<% book.forEach(function(book){ if(book.bookId === 'CATVA'){ %>
+		<div class="boxes">
+			<a href="/cat/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
+</div>
+
+ <section class="subjects">
+    <h3>Quantitative Aptitude</h3>
+  </section>
+
+  <div class="bookbox">
+    <% book.forEach(function(book){ if(book.bookId === 'CATQA'){ %>
+		<div class="boxes">
+			<a href="/cat/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
+    </div>
+
+ <section class="subjects">
+    <h3>Data Interpretation & Logical Reasoning</h3>
+ </section>
+
+ <div class="bookbox">
+   <% book.forEach(function(book){ if(book.bookId === 'CATDIALR'){ %>
+		<div class="boxes">
+			<a href="/cat/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
+</div>
+
+<%- include("../partials/footer") %>

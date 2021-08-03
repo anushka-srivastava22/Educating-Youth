@@ -1,0 +1,36 @@
+<%- include("../partials/header") %>
+
+<div class="d-flex justify-content-center">
+	<form action="/admin/books/<%=book._id%>?_method=PUT" method="POST" class="form py-3">
+		<h1 class="mb-4">Edit Book</h1>
+		<div class="form-group">
+			<label><b>Name of book</b></label>
+			<input type="text" name="book[name]" value="<%=book.name%>" class="form-control" required>
+		</div>
+		<div class="form-group">
+			<label><b>Description of book</b></label>
+			<input type="text" name="book[desc]" value="<%=book.desc%>" class="form-control" required>
+		</div>
+		<div class="form-group">
+			<label><b>Author's Name</b></label>
+			<input type="text" name="book[author]" value="<%=book.author%>" class="form-control" required>
+		</div>
+		<div class="form-group">
+			<label><b>Price</b></label>
+			<input type="text" name="book[price]" value="<%=book.price%>" class="form-control" required>
+		</div>
+		<div class="form-group">
+			<label><b>Book cover</b></label>
+			<input type="text" name="book[cover]" value="<%=book.cover%>" class="form-control" required>
+		</div>
+		<div class="form-group">
+			<label><b>Book ID</b></label>
+			<input type="text" name="book[bookId]" value="<%=book.bookId%>" class="form-control" required>
+		</div>
+		<div>
+			<button type="submit" class="btn btn-dark">Submit</button>
+		</div>
+	</form>
+</div>
+
+<%- include("../partials/footer") %>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <link rel="stylesheet" type="text/css" href="../stylesheets/comp.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/auth.css">
+	
+
+	
+	<title>Home</title>
+</head>
+<body onload="myFunction()">
+
+<!-- Preloader-->
+
+<div id="loading"><img src="../images/page-loader.gif"></div>
+	
+
+<!-- NAVBAR-->
+
+<nav class="navbar-fixed-top colored-nav" >
+    <input id="nav-toggle" type="checkbox">
+    <div class="logo"><a href="/">EverGreen Educado</a></div>
+    <ul class="navlinks">
+        <li> <a href="/"> HOME </a> </li>
+        <li> <a href="/#books-locate"> BOOKS </a> </li>
+        <li> <a href="#"> FUN </a> </li>
+        <li> <a href="/about-us"> ABOUT </a> </li>
+        <li> <a href="/contact-us"> CONTACT </a> </li>
+    </ul>
+    <label for="nav-toggle" class="icon-burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </label>
+</nav>
+	
+<form class="auth container" action="/register" method="POST">
+    <h1 class="h3 mb-3 fw-normal text-center">Create Account </h1>
+    <input type="text"  class="form-control my-3" name="username" placeholder="Username" required autofocus>
+    <input type="password" id="inputPassword" class="form-control my-3 " name="password" placeholder="Password" required>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
+    <p class="mt-5 mb-3 text-muted">&copy; Evergreen Educado</p>
+</form>
+<%- include("partials/footer") %>

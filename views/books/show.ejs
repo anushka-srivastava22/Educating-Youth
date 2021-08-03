@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buy the best resources for you exam!</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/buy.css"> 
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="../stylesheets/comp.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    </head>
+
+    <body> 
+
+        <!-- NAVBAR-->
+
+        <nav class="navbar-fixed-top colored-nav" >
+            <input id="nav-toggle" type="checkbox">
+            <div class="logo"><a href="/">EverGreen Educado</a></div>
+            <ul class="navlinks">
+                <li> <a href="/"> HOME </a> </li>
+                <li> <a href="/#books-locate"> BOOKS </a> </li>
+                <li> <a href="#"> FUN </a> </li>
+                <li> <a href="/about-us"> ABOUT </a> </li>
+                <li> <a href="/contact-us"> CONTACT </a> </li>
+            </ul>
+            <label for="nav-toggle" class="icon-burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+        </nav>
+        
+        <br> <br> <br> <br> <br>
+        
+        <div class="buy-page-content">
+            <div class="buy-img"><img  src="<%=book.cover%>" alt="image">
+            </div>
+            <div class="buy-container">
+                <h1 class="sub-heading"><%=book.sectionName%></h1>
+                <h3 class="book-heading"><%=book.name%></h3>
+                <h2 class="book-author">By <%=book.author%></h2>
+                <h3 class="book-price">Rs. <%=book.price%></h3>
+                <p class="stock-status">Seller : amazon </p>
+                <br> 
+                <a href="<%=book.buyLink%>"><button id="but-1">Buy Now</button></a>            
+                <p class="product-info"> Product Info  <span class="plus"> + </span>
+                <br>
+                <span class="more-info"><%=book.desc%></span> </p> 
+            </div>
+        </div>
+        
+      <div class="container">
+        <h2 class="text-center text-info"> All Reviews</h2>
+        <div class="mt-3 ">   
+            <div class="row">
+           <% for (let comment of book.comments) { %> 
+            <div class="col-6 bg-light">
+            <hr>
+            <h4 class="text-warning fw-bolder"> Rating: <%=comment.rating%> </h4>
+            <h5 class="text-dark fw-bold"> <%=comment.text%></h5>
+            <h6 class="text-primary fw-bold"> - <%=comment.author%>  </h6>
+            <hr>
+        </div>
+          <% } %>
+        </div>
+        </div>
+      </div>
+        <hr>
+        <div class="container bg-light">
+        <form action="/cat/<%= book._id %>/reviews" method="POST">
+            <h2 class=" text-success text-center mt-3">
+                Leave a Review
+            </h2>
+            <div class=" mb-3">
+                <label for="text" class="form-label ">Review</label>
+                <textarea class="form-control" name="comment[text]" id="body" rows="3" cols="20" placeholder="Write what you feel about this book!!" required></textarea>
+              </div>
+              <div class=" mb-3">
+                <label for="author" class="form-label ">Your name</label>
+                <input type="text" class="form-control" name="comment[author]" id="author" required >
+              </div>
+            
+              <div class="mb-3">
+                <label for="rating" class="form-label ">How many
+                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffdf00" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg> 
+                  ???</label>
+                  <br>
+                <input type="range" class="form-range" min="1" max="5" name="comment[rating]" id="rating">
+              </div>
+              <button class="btn btn-secondary mb-3" >Submit</button>
+    </form>
+    </div>
+
+    
+    <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+    <script src="../js/app.js"> </script> 
+    <script src="../js/buy.js"> </script>
+
+    <%- include("../partials/footer") %>

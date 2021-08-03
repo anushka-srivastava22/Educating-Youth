@@ -1,0 +1,108 @@
+<%- include("../partials/header") %>
+
+   <div class="animation-1">
+       <div class="animation-1-item">
+           <img src="../images/N1.jpg">
+           <div class="animation-1-item-text">
+               <h5>Quiz</h5>
+               <a href="#">
+                <p> Wanna do some questions.</p>  
+               </a>
+            </div>  
+       </div>
+
+       
+        <div class="animation-1-item">
+            <img src="../images/N2.png">
+            <div class="animation-1-item-text">
+                <h5>Quiz</h5>
+                <a href="#">
+                 <p> Wanna do some questions.</p>  
+                </a>
+             </div>  
+        </div>
+
+        
+            <div class="animation-1-item">
+                <img src="../images/N3.jpg">
+                <div class="animation-1-item-text">
+                    <h5>Quiz</h5>
+                    <a href="#">
+                     <p> Wanna do some questions.</p>  
+                    </a>
+                 </div>  
+            </div>     
+   </div>
+
+
+   <section class="bookheading">
+    <h1>NDA</h1>
+  </section>
+
+  <section class="subjects">
+    <h3>English</h3>
+  </section>
+
+ <div class="bookbox">
+   <% book.forEach(function(book){ if(book.bookId === 'NDAENG'){ %>
+		<div class="boxes">
+			<a href="/nda/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
+    </div>
+
+ <section class="subjects">
+    <h3>Mathematics</h3>
+  </section>
+
+  <div class="bookbox">
+   <% book.forEach(function(book){ if(book.bookId === 'NDAMATHS'){ %>
+		<div class="boxes">
+			<a href="/nda/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
+    </div>
+
+ <section class="subjects">
+    <h3>General Awareness</h3>
+ </section>
+
+ <div class="bookbox">
+  <% book.forEach(function(book){ if(book.bookId === 'NDAGA'){ %>
+		<div class="boxes">
+			<a href="/nda/<%= book._id %>">
+				<img src="<%=book.cover%>" alt="" width="225px" height="195px">
+			</a>
+	    </div>
+	<% }}) %>
+    </div>
+
+
+    <section class="subjects">
+        <h3> ALL IN ONE</h3>
+    </section>
+    <div class="bookbox">
+        <div class="boxes"><img src="../images/AL1.jpg" alt="" ></div>
+        <div class="boxes"><img src="../images/AL2.jpg" alt="" ></div>
+        <div class="boxes"><img src="../images/AL3.jpg" alt="" ></div>
+        <div class="boxes"><img src="../images/AL4.jpg" alt="" ></div>
+        <div class="boxes"><img src="../images/AL5.jpg" alt="" ></div>
+        <span id="dots">.</span> 
+        <span id="more">
+            <div class="morebox">
+          <div class="boxes"><img src="../images/AL6.jpg" alt="" ></div>
+          <div class="boxes"><img src="../images/AL7.jpg" alt="" ></div>
+          <div class="boxes"><img src="../images/AL8.jpg" alt="" ></div>
+          <div class="boxes"><img src="../images/AL9.jpg" alt="" ></div>
+          <div class="boxes"><img src="../images/AL10.jpg" alt="" ></div>
+          <div class="boxes"><img src="../images/AL11.jpg" alt="" ></div>
+          <div class="boxes"><img src="../images/AL12.jpg" alt="" ></div></div></span>
+    </div>
+    
+    <button class="shbtn" onclick="myFunction()" id="myBtn">Suggest more</button>
+
+<%- include("../partials/footer") %>
